@@ -1,0 +1,30 @@
+Exercício - Mapeamento de elementos HTML
+
+-> Site: <https://www.livelo.com.br/>
+    
+    - Botão do carrinho
+        #div-controlCart
+    - Botão de login
+        #div-controlLogin
+    - Botão de cadastro
+        #div-controlSignup
+
+-> Site: <https://www.divvino.com.br/>
+
+    - Array de botões de categorias
+        pr0 items-stretch vtex-flex-layout-0-x-stretchChildrenWidth
+    - Array de produtos (box do produto)
+        vtex-slider-layout-0-x-sliderTrackContainer
+    - Ícone de lupa da busca
+        #hpa-search
+    - Botão de ir para o carrinho
+        #hpa-cart
+
+-> Site: <https://www.google.com/>
+
+    - Campo de busca
+        #APjFqb
+    - Botão 'Pesquisa Google'
+        div[class="FPdoLc lJ9FBc"] center .gNO89b
+    - Array de links trazidos na busca
+        .v7W49e .MjjYud
