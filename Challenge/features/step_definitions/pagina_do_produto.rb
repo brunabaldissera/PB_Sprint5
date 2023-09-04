@@ -24,35 +24,28 @@ end
 Quando('aumentar a quantidade do produto') do
     @product_quantity_before = @product_page.input_quantity_product.value
     @product_page.btn_add_product.click
-  end
+end
   
-  Então('deverá alterar a quantidade exibida na PDP') do
+Então('deverá alterar a quantidade exibida na PDP') do
     expect(@product_page.input_quantity_product.value).to be > @product_quantity_before
-  end
+end
 
-  Quando('adicionar o produto ao carrinho') do 
-    @product_page.header.btn_cart.hover
-    begin
-      if @product_page.header.empty_cart.visible?
-        @product_cart_quantity_before = 0
-        @product_page.btn_save_to_cart.click
-        @product_page.header.btn_cart.click
-        @cart_page = Pages::CartPage.new  
-      end
-    rescue Capybara::ElementNotFound
-      @product_page.header.btn_cart.click
-      @cart_page = Pages::CartPage.new 
-      @product_cart_quantity_before = @cart_page.label_quantity.text.to_i 
-      page.go_back
+Quando('adicionar o produto ao carrinho') do 
+  @product_page.header.btn_cart.hover
+   begin
+    if @product_page.header.empty_cart.visible?
+      @product_cart_quantity_before = 0
       @product_page.btn_save_to_cart.click
-      @product_page.header.btn_cart.click
-    end    
+       @product_page.header.btn_cart.click
+      @cart_page = Pages::CartPage.new  
+    end
   end
+end
   
-  Então('o produto deverá ser adicionado com a quantidade aumentada') do
+Então('o produto deverá ser adicionado com a quantidade aumentada') do
     expect(@cart_page.label_quantity.text.to_i).to be > @product_cart_quantity_before
-  end
+end
 
-  Então('o produto deverá ser adicionado ao carrinho com sucesso') do
+Então('o produto deverá ser adicionado ao carrinho com sucesso') do
     expect(@product_page.product_name.text).to eq(@cart_page.cart_product_name.text)
-  end
+end

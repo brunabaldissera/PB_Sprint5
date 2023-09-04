@@ -3,7 +3,7 @@
 @regression
 @home
 Funcionalidade: Home Page
-    COMO cliente do Advantage Online Shopping
+    SENDO um usuário do Advantage Online Shopping
     QUERO navegar na página inicial
     PARA acessar as funcionalidades do website
 

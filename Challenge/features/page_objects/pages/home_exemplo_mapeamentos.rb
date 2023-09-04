@@ -9,16 +9,13 @@ class ProductsExemploMapeamentos < SitePrism::Section
 end
 
 class HomeExemploMapeamentos < SitePrism::Page
-    # ...
 
     sections :products, ProductsExemploMapeamentos, '.categoryRight li.ng-scope'
 
-    # Define a method to click on the third product's price
     def click_third_product_price
         products[2].price.click
     end
-
-    # Define a method to click on the last product
+    
     def click_last_product
         products.last.click
     end

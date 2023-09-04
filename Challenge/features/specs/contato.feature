@@ -3,7 +3,7 @@
 @regression
 @contact
 Funcionalidade: Contato
-    COMO um usuário do Ecommerce AdvantageOnlineShopping
+    SENDO um usuário do Ecommerce AdvantageOnlineShopping
     QUERO poder buscar por diferentes produtos
     PARA poder personalizar minhas compras
 
